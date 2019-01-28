@@ -10,7 +10,7 @@
       $folder="_config/img/qr/";
       $file_name="qr.png";
       $file_name=$folder.$voucher.$file_name;
-      QRcode::png($text, $file_name, QR_ECLEVEL_H, 5, 3, false);
+      QRcode::png($voucher, $file_name, QR_ECLEVEL_H, 5, 3, false);
 }?>
 <!doctype html>
 <html lang="en">
