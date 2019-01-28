@@ -56,7 +56,7 @@ span_share.onclick = function(){
 window.onclick = function(event){
     if (event.target === modal_login){
         modal_login.style.display = 'none';
-    } else if (event.target === modal_signup){
+    }else if (event.target === modal_signup){
         modal_signup.style.display = 'none';
     }else if (event.target === modal_share){
         modal_share.style.display = 'none';

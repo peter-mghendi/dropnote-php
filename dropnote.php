@@ -7,8 +7,9 @@
       
       include('./_includes/phpqrcode/qrlib.php'); 
       $text='HELLO WORLD';
+      $backtrack="../../../";
       $folder="_config/img/qr/";
-      $file_name="qr.png";
+      $file_name="_qr.png";
       $file_name=$folder.$voucher.$file_name;
       QRcode::png($voucher, $file_name, QR_ECLEVEL_H, 5, 3, false);
 }?>
