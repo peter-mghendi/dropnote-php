@@ -14,13 +14,16 @@
         </li>
     </ul>
     <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#shareModal" data-toggle="modal">Share</a>
+        </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="javascript:void(0)" id="btn_login">Log In</a>
-                <a class="dropdown-item" href="javascript:void(0)" id="btn_signup">Sign Up</a>
+                <a class="dropdown-item" href="#loginModal" data-toggle="modal">Log In</a>
+                <a class="dropdown-item" href="#signupModal" data-toggle="modal">Sign Up</a>
             </div>
         </li>
     </ul>

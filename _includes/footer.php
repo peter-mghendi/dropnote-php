@@ -1,3 +1,4 @@
+<?php include '_includes/_modal.php'; ?>
 <script type="text/javascript">
     var btnQr = document.getElementById("btnQr");
     var qrBack = document.getElementById("qrBack");
@@ -28,11 +29,10 @@
         };
 </script>
 <script src="_assets/js/index.js"></script>
-<script src="_assets/js/custom.js"></script>
 <script src="_assets/vendor/jquery/jquery-3.4.1.min.js"></script>
 <script src="_assets/vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="_assets/vendor/fontawesome-free-5.9.0-web/js/all.min.js"></script>
-<script src="assets/vendor/datatables/datatables.min.js"></script>
+<script src="_assets/vendor/datatables/datatables.min.js"></script>
 </body>
 </html>
 

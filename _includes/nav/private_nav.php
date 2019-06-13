@@ -14,6 +14,9 @@
             </li>
         </ul>
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#shareModal" data-toggle="modal">Share</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?=$_SESSION['username']; ?>
@@ -22,7 +25,7 @@
                     <a class="dropdown-item" href="profile.php">View Profile</a>
                     <a class="dropdown-item" href="drops.php">My Drops</a>
                     <a class="dropdown-item" href="private.php">Private Notes</a>
-                    <a class="dropdown-item" href="_includes/_logout.php">Log Out</a>
+                    <a class="dropdown-item" href="#logoutModal" data-toggle="modal">Log Out</a>
                 </div>
             </li>
         </ul>
