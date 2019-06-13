@@ -5,7 +5,7 @@
             <h3>Log In Here</h3>
         </div>
         <div class="modal-body">
-            <?php include 'login.php';?>
+            <?php include '_includes/modal/login.php';?>
         </div>
         <div class="modal-footer">
             <button id="btnsignup" class="btn btn-warning btn-block">Don't have an account? Sign Up</button>
@@ -19,7 +19,7 @@
             <h3>Sign Up Here</h3>
         </div>
         <div class="modal-body">
-            <?php include 'signup.php';?>
+            <?php include '_includes/modal/signup.php';?>
         </div>
         <div class="modal-footer">
             <button id="btnlogin" class="btn btn-warning btn-block">Have an account? Log In</button>
@@ -33,7 +33,7 @@
             <h3>Share</h3>
         </div>
         <div class="modal-body">
-            <?php include 'share.php';?>
+            <?php include '_includes/modal/share.php';?>
         </div>
     </div>
 </div>

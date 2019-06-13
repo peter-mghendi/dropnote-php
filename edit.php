@@ -1,18 +1,6 @@
-<!doctype html>
 <?php include './_includes/_protect.php' ?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DropNote | Edit Note</title>
-    <link rel="stylesheet" href="_config/css/bootstrap.css"/>
-    <link rel="stylesheet" href="_config/css/custom.css">
-    <link rel="stylesheet" href="_config/css/dataTables.css"/>
-
-</head>
-<body>
+<?php include '_includes/header.php'; ?>
 <?php
-include './_includes/nav/private_nav.php';
-include './_includes/_connect.php';
 $edited = $_GET['id'];
 $sql ="select * from notes WHERE id = '$edited'";
 $result = mysqli_query($db,$sql);
@@ -55,8 +43,4 @@ if (!$row[6] != "[Unspecified]"){
         </form>
     </div>
 </div>
-<script src="_config/js/custom.js"></script>
-<script src="_config/js/jquery.min.js"></script>
-<script src="_config/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php include '_includes/footer.php'; ?>

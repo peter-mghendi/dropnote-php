@@ -1,14 +1,5 @@
 <?php include '_includes/_protect.php'?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DropNote | <?Php echo $_SESSION['username'] ?>'s Profile</title>
-    <link rel="stylesheet" href="_config/css/bootstrap.css"/>
-    <link rel="stylesheet" href="_config/css/custom.css">
-    <link rel="stylesheet" href="_config/css/dataTables.css"/>
-</head>
-<body>
-<?php include '_includes/_nav.php' ?>
+<?php include '_includes/header.php'; ?>
 <div class="container-fluid page-content">
     <div class="card-content">
     <h2><b>Profile</b></h2>
@@ -60,18 +51,4 @@
     </table>
     </div>
 </div>
-<script src="_config/js/jquery.min.js"></script>
-<script src="_config/js/bootstrap.min.js"></script>
-<script src="_config/js/custom.js"></script>
-<script type="text/javascript">
-   function() forreal{
-   confirm("Do you want to continue ?");
-   if( retVal === true ){
-        alert("User wants to continue!");
-        return true;
-   }else{
-        alert("User does not want to continue!");
-	return false;
-   }};   
-</script>
-</body>
+<?php include '_includes/footer.php'; ?>
