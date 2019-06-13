@@ -34,3 +34,4 @@ if (!isset($_SESSION['username'])){
 $sql="UPDATE notes SET title = '$new_title', content = '$new_content', dropped_by = '$new_dropped_by', dropped_for = '$new_dropped_for' WHERE id = $edited";
 mysqli_query($db, $sql);
 header("location:../drops.php");
+exit();

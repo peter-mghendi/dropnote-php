@@ -48,6 +48,7 @@ if($count == 0)
     $_SESSION['token'] = $token;
     
     header("location:../index.php");
+    exit();
 }
 else
 {

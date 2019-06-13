@@ -26,23 +26,13 @@
             visibleCard.style.display = "block";
             hiddenCard.style.display = "none";  
         };
-</script> 
-<script src="_config/js/index.js"></script>
-<script src="_config/js/custom.js"></script>
-<script src="_config/js/jquery.min.js"></script>
-<script src="_config/js/bootstrap.min.js"></script>
-<script src="_config/js/qrcode.min.js"></script>
-<script type="text/javascript">
-   function() forreal{
-   confirm("Do you want to continue ?");
-   if( retVal === true ){
-        alert("User wants to continue!");
-        return true;
-   }else{
-        alert("User does not want to continue!");
-	return false;
-   }};   
 </script>
+<script src="_assets/js/index.js"></script>
+<script src="_assets/js/custom.js"></script>
+<script src="_assets/vendor/jquery/jquery-3.4.1.min.js"></script>
+<script src="_assets/vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="_assets/vendor/fontawesome-free-5.9.0-web/js/all.min.js"></script>
+<script src="assets/vendor/datatables/datatables.min.js"></script>
 </body>
 </html>
 

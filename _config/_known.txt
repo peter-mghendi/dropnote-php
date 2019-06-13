@@ -1,8 +1,0 @@
-Known Issues
--------------
-1. Close buttons on login, signup and share popups not working.
-2. Copy buttons on vouchers/links not working.
-3. Displays blank field if note is not found.
-4. Link to other user's profiles does not do anything yet.
-5. Share button opens blank popup when logged out.
-6. Share button does nothing when logged in.  

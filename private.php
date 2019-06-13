@@ -1,9 +1,6 @@
 <?php include './_includes/_protect.php' ?>
 <?php include '_includes/header.php'; ?>
-<?php if (session_status() === PHP_SESSION_NONE ){session_start();}
-include '_includes/_nav.php'; 
-include '_includes/_modal.php'; 
-include './_includes/_connect.php'; 
+<?php 
 $privateCard = "none;";
 if(isset($_GET['voucher'])){
     $privateCard = "block;";

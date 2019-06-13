@@ -7,7 +7,7 @@
     <h5>Here you can view edit your profile info.</h5>
     <span>
     <a href='_account/change.php' class='btn btn-sm btn-warning box-btn text-center'>EDIT PROFILE</a>
-    <a href="javascript:voi(0)" onclick="return forreal()" id="btnDelUser" class='btn btn-sm btn-danger box-btn text-center'>DELETE MY ACCOUNT</a>
+    <a href="javascript:void(0)" id="btnDelUser" class='btn btn-sm btn-danger box-btn text-center'>DELETE MY ACCOUNT</a>
     <?php //href='_account/_deleteuser.php' ?> 
     </span>
     <table class="table" id="example">

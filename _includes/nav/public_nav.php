@@ -1,28 +1,28 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-hand-down"></span> DropNote</a>
-            <a class="navbar-brand" id="btnshare" href="javascript:void(0);"><span class="glyphicon glyphicon-share"></span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="dropnote.php"><span class="glyphicon glyphicon-bookmark"></span> Drop Note</a></li>
-                <li><a href="dropcode.php"><span class="glyphicon glyphicon-barcode"></span> Drop Code</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="glyphicon glyphicon-user"></span> Account
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="javascript:void(0);" id="btn_login"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
-                        <li><a href="javascript:void(0);" id="btn_signup"><span class="glyphicon glyphicon-cloud-upload"></span> Sign Up</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.php">DropNote</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="dropnote.php">Drop Note<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="dropcode.php">Drop Code</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="javascript:void(0)" id="btn_login">Log In</a>
+                <a class="dropdown-item" href="javascript:void(0)" id="btn_signup">Sign Up</a>
+            </div>
+        </li>
+    </ul>
+  </div>
 </nav>
