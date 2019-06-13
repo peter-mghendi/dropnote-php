@@ -18,6 +18,7 @@ if ($count>=1){
     $_SESSION['password'] = $password;
     $_SESSION['token'] = $token;
     header("location:../index.php");
+    exit();
 }else{
     echo "Wrong Username/Password";
 }

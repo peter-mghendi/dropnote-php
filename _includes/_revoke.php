@@ -30,3 +30,4 @@ if(isset($_GET['id'])){
 $isql= "UPDATE notes SET voucher='$new_voucher' WHERE id = '$revoked'";
 mysqli_query($db, $isql) or die(mysqli_error($db));
 header("location:../drops.php");
+exit();

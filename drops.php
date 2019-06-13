@@ -1,23 +1,12 @@
-<!DOCTYPE html>
 <?php include './_includes/_protect.php' ?>
-<html>
-    <head>
-    <meta charset="UTF-8">
-    <title>DropNote | My Drops</title>
-    <link rel="stylesheet" href="_config/css/bootstrap.css">
-    <link rel="stylesheet" href="_config/css/custom.css">
-</head>
-<body>
-<?php if (session_status() === PHP_SESSION_NONE ){session_start();}
+<?php include '_includes/header.php'; ?>
+<?php 
 $contentCard = "none;";
 if(isset($_GET['voucher'])){
     $contentCard = "block;";
 }
 $vistat = 'visible'; 
-$histat = 'hidden';
-include '_includes/_nav.php'; 
-include '_includes/_modal.php'; 
-include './_includes/_connect.php'; ?>
+$histat = 'hidden';  ?>
 <div class="container-fluid" >
     <div id="visibleNotes" class="card-content notes-margin">
     <br>
@@ -144,22 +133,4 @@ include './_includes/_connect.php'; ?>
         <p><?php echo $content?></p>
     </div>
 </div>
-    <script type="text/javascript">
-        var visibleCard = document.getElementById("visibleNotes");
-        var hiddenCard = document.getElementById("hiddenNotes");
-        var btnShow = document.getElementById("btnShow");
-        var btnHide = document.getElementById("btnHide");
-        
-        btnShow.onclick = function() {
-            visibleCard.style.display = "none";
-            hiddenCard.style.display = "block";  
-        };
-        btnHide.onclick = function() {
-            visibleCard.style.display = "block";
-            hiddenCard.style.display = "none";  
-        };
-    </script>
-    <script src="_config/js/jquery.min.js"></script>
-    <script src="_config/js/bootstrap.js"></script>
-</body>
-</html>
+<?php include '_includes/footer.php'; ?>

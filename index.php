@@ -1,18 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DropNote | Home</title>
-    <link rel="stylesheet" href="_config/css/bootstrap.css"/>
-    <link rel="stylesheet" href="_config/css/custom.css">
-    <link rel="stylesheet" href="_config/css/dataTables.css"/>
-
-</head>
-<body>
-<?php
-include '_includes/_nav.php';
-include '_includes/_modal.php';
-?>
+<?php include '_includes/header.php'; ?>
 <div class="container-fluid" >
     <div id="welcomeCard" class="card-content text-center">
         <h3>DropNote</h3><hr>
@@ -58,9 +44,4 @@ include '_includes/_modal.php';
         </p>
     </div>
 </div>
-<script src="_config/js/index.js"></script>
-<script src="_config/js/custom.js"></script>
-<script src="_config/js/jquery.min.js"></script>
-<script src="_config/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php include '_includes/footer.php'; ?>

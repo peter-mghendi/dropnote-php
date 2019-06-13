@@ -15,3 +15,4 @@ else
 }
 $result = mysqli_query($db, $isql);
 header("location:../drops.php");
+exit();

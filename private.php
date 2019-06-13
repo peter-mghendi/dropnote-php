@@ -1,17 +1,6 @@
-<!DOCTYPE html>
 <?php include './_includes/_protect.php' ?>
-<html>
-    <head>
-    <meta charset="UTF-8">
-    <title>DropNote | Private Notes</title>
-    <link rel="stylesheet" href="_config/css/bootstrap.css">
-    <link rel="stylesheet" href="_config/css/custom.css">
-</head>
-<body>
-<?php if (session_status() === PHP_SESSION_NONE ){session_start();}
-include '_includes/_nav.php'; 
-include '_includes/_modal.php'; 
-include './_includes/_connect.php'; 
+<?php include '_includes/header.php'; ?>
+<?php 
 $privateCard = "none;";
 if(isset($_GET['voucher'])){
     $privateCard = "block;";
@@ -61,7 +50,4 @@ if(isset($_GET['voucher'])){
         <p><?php echo $content?></p>
     </div>
 </div>
-    <script src="_config/js/jquery.min.js"></script>
-    <script src="_config/js/bootstrap.js"></script>
-</body>
-</html>
+<?php include '_includes/footer.php'; ?>

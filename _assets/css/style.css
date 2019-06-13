@@ -1,0 +1,113 @@
+.box-btn{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 3px;
+}
+
+.box-btn:hover,
+.box-btn:focus{
+    box-shadow: none;
+}
+
+.btn-other{
+    background: #d2601d;
+    color: #ffffff;
+}
+
+.card-content{
+    background-color: rgba(0,0,16,0.7) ;
+    opacity: .73;
+    color: #fefefe;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 95%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+}
+
+.dropdown-menu{
+    /* border-radius: 0; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.footer-div{
+    float: left;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer-inverse {
+    background-color: #222;
+    border-color: #080808;
+    border-radius: 0;
+}
+
+.footer-text {
+    color: #9d9d9d;
+}
+
+.hidden-div{
+    display: none;
+}
+
+.img-share{
+    position: relative;
+    max-width: 23.3%;
+    margin: 3px;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.notes-margin{
+    margin-top:70px;
+}
+
+.page-content{
+    margin-top: 60px;
+}
+
+#btn_compose{
+    background-color: #ffffff;
+    border: none;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+#btn_compose:hover{
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+#myToggle{
+    cursor: pointer;
+}
+
+#welcomeCard{
+    margin-top:70px;
+}
+
+#qrcode{
+    width: 64px;
+    height: 64px;
+}
+
+body{background: #9493aa;}
+
+h2{
+    height: 40px;
+   padding-top: 8px;
+}
+
+td{
+    color: #fefefe;
+}
