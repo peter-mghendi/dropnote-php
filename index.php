@@ -18,13 +18,13 @@
     <div class="container card tab-content" id="pills-tabContent">
         <div class="card-body tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="pills-info-tab">
             <h4 class="card-title"><i class="fas fa-info-circle mr-2"></i>Info</h4>
-            <p class="card-text">Behold, we bring you DropNote! (Are you beholding?) The tool you never knew you needed (Because you probably don't). 
+            <p class="card-text">Behold, we bring you DropNote! (Are you beholding?) The tool you never knew you needed (because you probably don't). 
                     Okay, I did this as a joke. But hey, here we are, and here it is. Just one rule though: don't make it a point listening 
                     to words on a screen. Honestly, why are you even reading this? </p>
                 <p>Okay don't get me wrong, I did this as seriously as anything else (ummmm...), but it may contain bugs that slipped past
                     our notice (The ones that aren't intentional). Click <a href="_includes/_known.php"><i class="far fa-hand-point-right mr-2"></i>here<i class="far fa-hand-point-left ml-2"></i></a> to 
                     view the bugs we've already caught, report the ones we 
-                        haven't and/or discuss us putting in new ones for you to "catch". ;) </p>               
+                    haven't and/or discuss us putting in new ones for you to "catch". ;) </p>               
             </p>
         </div>
         <div class="card-body tab-pane fade" id="about" role="tabpanel" aria-labelledby="pills-about-tab">
