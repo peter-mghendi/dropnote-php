@@ -28,7 +28,6 @@
             hiddenCard.style.display = "none";  
         };
 </script>
-<script src="_assets/js/index.js"></script>
 <script src="_assets/vendor/jquery/jquery-3.4.1.min.js"></script>
 <script src="_assets/vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="_assets/vendor/fontawesome-free-5.9.0-web/js/all.min.js"></script>
