@@ -1,27 +1,30 @@
 <?php
   $card = 'none;';
-  if( isset($_POST['voucher']) or isset($_GET['voucher']))
-  {
+  // TODO Validate data, minify
+  if (isset($_POST['voucher']) or isset($_GET['voucher'])) {
       include './_includes/_dropcode.php'; 
       $card = 'block;';
-}
+    }
 ?>
 <?php include '_includes/header.php'; ?>
-<div class="container-fluid page-content" >
-    <div class="card-content">
-        <form class="form" role="form" method="post" action="<?php $_PHP_SELF ?>">
-            <div class="form-group">
-                <label for="title">Code: </label>
-                <input type="text" class="form-control" name="voucher" id="voucher" placeholder="Drop Code Here" autocomplete="off">
-            </div>
-            <button type="submit" class="btn btn-other btn-block" name="submit"><span class="glyphicon glyphicon-hand-down"></span> Drop</button>
-        </form>
+<div class="container page-content" >
+    <div class="card mb-3">
+        <div class="card-body">
+            <form class="form" role="form" method="post">
+                <div class="form-group">
+                    <label for="title">Code: </label>
+                    <input type="text" class="form-control" name="voucher" id="voucher" placeholder="Drop Code Here" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-other btn-block" name="submit">Drop</button>
+            </form>
+        </div>
     </div>
-    <div class="card-content" style="display: <?php echo $card;?>">
-        <h3><b>RE: <?php echo $title ?></b></h3>
-        <h4>Dropped by <?php echo $drop_by;?> on <?php echo $dropped_on;?></h4>
-        <hr>
-        <p><?php echo $content?></p>
+    <div class="card mb-3" style="display: <?=$card;?>">
+        <div class="card-header">
+            <h4 class="card-title"><b>RE: <?=$title;?></b></h4>
+            <h5 class="card-subtitle ext-muted mb-2">Dropped by <?=$drop_by;?> on <?=$dropped_on;?></h5>
+        </div>
+        <div class="card-body"><p><?=$content?></p></div>
     </div>
 </div>
 <?php include '_includes/footer.php'; ?>

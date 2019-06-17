@@ -1,6 +1,9 @@
 <?php 
     if (session_status() === PHP_SESSION_NONE) session_start(); 
     $this_page = basename($_SERVER["PHP_SELF"]);
+
+    include('./_includes/phpqrcode/qrlib.php'); 
+
     include './_includes/_connect.php';
     include '_account/_edit.php';
 ?>
@@ -16,5 +19,6 @@
 </head>
 <body>
 <?php
+    // TODO Minify navbar
     include '_includes/_nav.php';
 ?>

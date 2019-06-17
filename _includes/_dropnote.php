@@ -41,6 +41,6 @@ if (!isset($_SESSION['username'])){$dropped_by = '[Anonymous]';
     $dropped_by = $row[4];
 }
 $status = 'visible';
-$link = "localhost:8080/DropNote/dropcode.php?voucher=$voucher";
+$link = "localhost/dropnote-web/dropcode.php?voucher=$voucher";
 $sql="INSERT INTO notes VALUES (null,'$title','$content','$voucher','$dropped_on','$dropped_by','$dropped_for','$status')";
 mysqli_query($db, $sql);
