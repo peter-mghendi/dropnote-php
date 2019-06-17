@@ -24,8 +24,8 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#profileModal" data-toggle="modal">View Profile</a>
-                            <a class="dropdown-item" href="drops.php">My Drops</a>
-                            <a class="dropdown-item" href="private.php">Private Notes</a>
+                            <a class="dropdown-item" href="drops.php">Drops</a>
+                            <a class="dropdown-item" href="inbox.php">Inbox</a>
                             <a class="dropdown-item" href="#logoutModal" data-toggle="modal">Log Out</a>
                         </div>
                 </li>

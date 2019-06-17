@@ -18,7 +18,4 @@
     <link rel="stylesheet" href="_assets/css/style.css?<?=time();?>">
 </head>
 <body>
-<?php
-    // TODO Minify navbar
-    include '_includes/navbar.php';
-?>
+<?php include '_includes/navbar.php'; ?>

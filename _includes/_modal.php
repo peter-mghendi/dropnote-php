@@ -49,6 +49,7 @@
   </div>
 </div>
 
+<!-- TODO: Delete User -->
 <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -63,10 +64,6 @@
         </button>
       </div>
       <div class="modal-body"><?php include '_includes/modal/profile.php';?></div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">No, cancel.</button>
-        <a href="_includes/_logout.php" class="btn btn-danger">Yes, log out.</a> -->
-      </div>
     </div>
   </div>
 </div>

@@ -34,7 +34,7 @@
             <p class="card-text">1. Whatever you write here is your own problem. If it gets you arrested, don't drag me into it.
                 Yeah. That about covers it. Oh, and no, I won't fix your computer.</p>
             <p class="card-text">2. Any data you provide will not be shared with any third parties by DropNote (cough, cough...zuckerberg...cough).</p>
-            <p class="card-text">&copy !boop <?php echo date("Y");?>.  All rights reserved.</p>
+            <p class="card-text">&copy !boop <?=date("Y");?>.  All rights reserved.</p>
         </div>
         <div class="card-body tab-pane fade" id="help" role="tabpanel" aria-labelledby="pills-help-tab">
             <h4><i class="fas fa-life-ring mr-2"></i>Help</h4>

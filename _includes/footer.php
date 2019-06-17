@@ -1,3 +1,4 @@
+<div class="fixed-bottom text-center bg-dark text-light">&copy <?=date("Y");?> !boop</div>
 <?php include '_includes/_modal.php'; ?>
 <script type="text/javascript">
     var btnQr = document.getElementById("btnQr");
@@ -33,6 +34,7 @@
 <script src="_assets/vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 <script src="_assets/vendor/fontawesome-free-5.9.0-web/js/all.min.js"></script>
 <script src="_assets/vendor/datatables/datatables.min.js"></script>
+<script src="_assets/js/main.js"></script>
 </body>
 </html>
 
