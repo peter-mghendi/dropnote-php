@@ -13,23 +13,19 @@
     color: #ffffff;
 }
 
-.card-content{
+.index .card{
     background-color: rgba(0,0,16,0.7) ;
     opacity: .73;
     color: #fefefe;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    width: 95%;
-    max-width: 600px;
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 5px;
 }
 
 .dropdown-menu{
-    /* border-radius: 0; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -54,20 +50,56 @@
     display: none;
 }
 
-.img-share{
-    position: relative;
-    max-width: 23.3%;
-    margin: 3px;
-    float: left;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
 .notes-margin{
     margin-top:70px;
 }
 
 .page-content{
     margin-top: 60px;
+}
+
+.social-item{
+    padding: 16px;
+    font-size: 30px;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 500ms;
+    border-radius: 50%;
+}
+
+.social-item a{
+    color: #fff;
+}
+
+.social-item:hover {
+    /* opacity: 0.8; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.social-item.facebook {
+    background-color:  #3b5998;
+}
+
+.social-item.twitter {
+    background-color: #1da1f2;
+}
+
+.social-item.reddit {
+    background-color: #ff4301;
+}
+
+.social-item.telegram {
+    background-color: #0088cc;
+}
+
+.social-item.whatsapp {
+    background-color: #4ac959;
+}
+
+.social-item.mail {
+    background-color: #55ACEE;
 }
 
 #btn_compose{
@@ -102,12 +134,3 @@
 }
 
 body{background: #9493aa;}
-
-h2{
-    height: 40px;
-   padding-top: 8px;
-}
-
-td{
-    color: #fefefe;
-}

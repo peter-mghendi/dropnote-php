@@ -36,12 +36,34 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Share</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body"><?php include '_includes/modal/share.php';?></div>
+      <div class="modal-footer d-flex">
+        <p class="mx-auto">Social links may not show if an adblocker is enabled.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TODO: Delete User -->
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="nav nav-pills">
+            <a class="nav-item nav-link active" data-toggle="pill" id="view-tab" href="#view">View</a>
+            <a class="nav-item nav-link" data-toggle="pill" id="edit-tab" href="#edit">Edit</a>
+            <a class="nav-item nav-link" data-toggle="pill" id="password-tab" href="#password">Password</a>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"><?php include '_includes/modal/profile.php';?></div>
     </div>
   </div>
 </div>
