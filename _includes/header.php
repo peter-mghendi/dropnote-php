@@ -20,5 +20,5 @@
 <body>
 <?php
     // TODO Minify navbar
-    include '_includes/_nav.php';
+    include '_includes/navbar.php';
 ?>
