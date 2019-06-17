@@ -14,8 +14,8 @@ $hicount = mysqli_num_rows($hiresult);
 <div class="container-fluid" >
     <div id="visibleNotes" class="card notes-margin mb-3">
         <div class="card-body">
-            <a href="_includes/_hide.php?status=<?=$vistat;?>" class="btn btn-sm btn-warning box-btn">HIDE ALL</a>
             <a href="javascript:void(0)" id="btnShow" class="btn btn-sm btn-success box-btn">VIEW HIDDEN</a>
+            <a href="_includes/_hide.php?status=<?=$vistat;?>" class="btn btn-sm btn-warning box-btn">HIDE ALL</a>
             <a href="_includes/_delete.php?status=<?=$vistat;?>" class="btn btn-sm btn-danger box-btn">DELETE ALL</a>
             <table class="table table-borderless table-hover datatable" id="example">
                 <caption><?="You have $hicount hidden notes";?></caption>
@@ -60,52 +60,54 @@ $hicount = mysqli_num_rows($hiresult);
         </div>
     </div>
     
-    <div id="hiddenNotes" class="card text-center hidden-div notes-margin mb-3">
-        <a href="_includes/_hide.php?status=<?php echo $histat; ?>" class="btn btn-sm btn-warning box-btn"><span class="glyphicon glyphicon-eye-open"></span> UNHIDE ALL</a>
+    <div id="hiddenNotes" class="card hidden-div notes-margin mb-3">
+        <div class="card-body">
         <a href="javascript:void(0)" id="btnHide" class="btn btn-sm btn-success box-btn"><span class="glyphicon glyphicon-eye-close"></span> HIDE HIDDEN</a>
+        <a href="_includes/_hide.php?status=<?php echo $histat; ?>" class="btn btn-sm btn-warning box-btn"><span class="glyphicon glyphicon-eye-open"></span> UNHIDE ALL</a>
         <a href="_includes/_delete.php?status=<?php echo $histat; ?>" class="btn btn-sm btn-danger box-btn"><span class="glyphicon glyphicon-trash"></span> DELETE ALL</a>
         <table class="table table-borderless table-hover datatable" id="example">
-            <caption><?="You have $hicount hidden notes";?></caption>
-            <thead>
-            <tr class="text-center">
-                <th>TITLE</th>
-                <th>VOUCHER</th>
-                <th>DROPPED ON</th>
-                <th>DROPPED FOR</th>
-                <th>ACTION</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            
-            while($hirow =mysqli_fetch_row($hiresult)){
-                $id = $hirow[0];
-                if (!$hirow[6] != "[Unspecified]"){
-                    $hitok = $hirow[6];
-                    $hisql= "SELECT * FROM users WHERE token = '$hitok'";
-                    $hires = mysqli_query($db,$hisql);
-                    $hirow =mysqli_fetch_row($hires);
-                    $hidrop_for = $hirow[2];
-                } else {
-                    $hidrop_for = $hirow[6]; 
-                }
+                <caption><?="You have $hicount hidden notes";?></caption>
+                <thead>
+                <tr class="text-center">
+                    <th>TITLE</th>
+                    <th>VOUCHER</th>
+                    <th>DROPPED ON</th>
+                    <th>DROPPED FOR</th>
+                    <th>ACTION</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
                 
-                echo "<tr>";
-                echo "<td><a href = \"drops.php?voucher=$hirow[3]\">$hirow[1]</a></td>";
-                echo "<td>$hirow[3]</td>";
-                echo "<td>$hirow[4]</td>";
-                echo "<td><a>$hidrop_for</a></td>";
-                echo "<td><span>
-                        <a name='edit' title='Edit' class='glyphicon glyphicon-edit' href='edit.php?id=$id'></a>
-                        <a name='unhide' title='Unhide' class='glyphicon glyphicon-eye-open' href='_includes/_hide.php?id=$id&status=$histat'></a>
-                        <a name='revoke' title='Revoke' class='glyphicon glyphicon-console' href='_includes/_revoke.php?id=$id'></a>
-                        <a name='delete' title='Delete' class='glyphicon glyphicon-trash' href='_includes/_delete.php?id=$id&status=$histat'></a>
-                    </span></td>";
-                echo "</tr>";
-            }
-            ?>
-            </tbody>
-        </table>
+                while($hirow =mysqli_fetch_row($hiresult)){
+                    $id = $hirow[0];
+                    if (!$hirow[6] != "[Unspecified]"){
+                        $hitok = $hirow[6];
+                        $hisql= "SELECT * FROM users WHERE token = '$hitok'";
+                        $hires = mysqli_query($db,$hisql);
+                        $hirow =mysqli_fetch_row($hires);
+                        $hidrop_for = $hirow[2];
+                    } else {
+                        $hidrop_for = $hirow[6]; 
+                    }
+                    
+                    echo "<tr>";
+                    echo "<td><a href = \"drops.php?voucher=$hirow[3]\">$hirow[1]</a></td>";
+                    echo "<td>$hirow[3]</td>";
+                    echo "<td>$hirow[4]</td>";
+                    echo "<td><a>$hidrop_for</a></td>";
+                    echo "<td><span>
+                            <a name='edit' title='Edit' class='glyphicon glyphicon-edit' href='edit.php?id=$id'></a>
+                            <a name='unhide' title='Unhide' class='glyphicon glyphicon-eye-open' href='_includes/_hide.php?id=$id&status=$histat'></a>
+                            <a name='revoke' title='Revoke' class='glyphicon glyphicon-console' href='_includes/_revoke.php?id=$id'></a>
+                            <a name='delete' title='Delete' class='glyphicon glyphicon-trash' href='_includes/_delete.php?id=$id&status=$histat'></a>
+                        </span></td>";
+                    echo "</tr>";
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
     </div>
     
     <div class="card mb-3" style="display: <?=$contentCard;?>">
