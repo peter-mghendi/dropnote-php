@@ -19,10 +19,10 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <?=$_SESSION['username']; ?>
+                <?=$_SESSION['user']; ?>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="profile.php">View Profile</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#profileModal" data-toggle="modal">View Profile</a>
                     <a class="dropdown-item" href="drops.php">My Drops</a>
                     <a class="dropdown-item" href="private.php">Private Notes</a>
                     <a class="dropdown-item" href="#logoutModal" data-toggle="modal">Log Out</a>

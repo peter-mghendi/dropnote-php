@@ -2,7 +2,7 @@
 
     <div class="form-group">
         <label for="names">Username</label>
-        <input type="text" class="form-control" name="names" placeholder="Your Name" maxlength="100" autocomplete="off" required>
+        <input type="text" class="form-control" name="username" placeholder="Your Name" maxlength="100" autocomplete="off" required>
     </div>
 
     <div class="form-group">

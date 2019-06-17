@@ -1,5 +1,5 @@
 <?php include '_includes/header.php'; ?>
-<div class="container-fluid" >
+<div class="container-fluid index" >
     <div id="welcomeCard" class="container card text-center">
         <div class="card-body">
             <h4 class="card-title">DropNote</h4>
