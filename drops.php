@@ -113,10 +113,14 @@ $hicount = mysqli_num_rows($hiresult);
     <div class="card mb-3" style="display: <?=$contentCard;?>">
         <?php include './_includes/_dropcode.php';?>
         <div class="card-header">
-            <h3><b>RE: <?=$title ?></b></h3>
-            <h4><b>Dropped on <?=$dropped_on;?></b></h4>
-            <!-- TODO Copy -->
-            <h5><b>Voucher: <?=$voucher;?> <a><span class="glyphicon glyphicon-copy"></span></a></b></h5>
+            <h4 class="card-title"><b>RE: <?=$title ?></b></h4>
+            <h5 class="card-subtitle text-muted"><b>Dropped on <?=$dropped_on;?></b></h5>
+            <div class="d-block">
+                <h5 class="card-subtitle text-muted d-inline">Voucher: <span id="code"><?=$voucher;?></span></h5>
+                <a class="btn btn-link trigger text-primary" data-trigger="copy" data-clipboard-target="#voucher">
+                    <i class="far fa-copy"></i>
+                </a>
+            </div>
         </div>
         <div class="card-body"><p><?=$content?></p></div>
     </div>
