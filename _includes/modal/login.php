@@ -1,7 +1,7 @@
-<form class="form" role="form" method="post" action="_includes/_login.php">
+<form class="form" role="form" method="post">
     <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" name="email" placeholder="Your Email" autocomplete="off" required>
+        <label for="login">Email</label>
+        <input type="email" class="form-control" name="login" placeholder="Your Email" autocomplete="off" required>
     </div>
 
     <div class="form-group">

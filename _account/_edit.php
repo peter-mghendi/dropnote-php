@@ -1,9 +1,8 @@
 <?php
-    $token = $_SESSION['token'];
-
     // TODO Data authentication
     if(isset($_POST["new_username"])) {
         extract($_POST);
+        $token = $_SESSION['token'];
         $sql ="select username, email from users where token = '$token'";
         $res = mysqli_query($db,$sql);
         $row =mysqli_fetch_row($res);
@@ -19,6 +18,8 @@
     // TODO Data authentication
     if(isset($_POST["old_password"])) {
         extract($_POST);
+        $token = $_SESSION['token'];
+        $new_password = md5($new_password);
         $sql="UPDATE users SET password = '$new_password' WHERE token = '$token'";
         mysqli_query($db, $sql) or die(mysqli_error($db));
         header("location:$this_page");

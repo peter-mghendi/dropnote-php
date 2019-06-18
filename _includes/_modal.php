@@ -80,7 +80,7 @@
       <div class="modal-body">Are you sure you want to log out?</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No, cancel.</button>
-        <a href="_includes/_logout.php" class="btn btn-danger">Yes, log out.</a>
+        <a href="<?=$this_page;?>?logout=1" class="btn btn-danger">Yes, log out.</a>
       </div>
     </div>
   </div>

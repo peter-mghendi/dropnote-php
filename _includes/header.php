@@ -5,6 +5,7 @@
     include('./_includes/phpqrcode/qrlib.php'); 
 
     include './_includes/_connect.php';
+    include '_includes/_auth.php';
     include '_account/_edit.php';
 ?>
 <!DOCTYPE html>
