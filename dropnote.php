@@ -35,12 +35,21 @@
             </form>
         </div>
     </div>
-    <!-- TODO: Copy function, data API -->
     <div class="card hidden-div mb-3" id="voucherCard" style="display: <?php echo $card;?>">
         <div class="card-body">
-            <h3>Your note <?php echo $title ?> has been saved!</h3>
-            <p>Your code is: <?php echo $voucher ?> <a><span class="glyphicon glyphicon-copy"></span></a></p>
-            <p>Your link is: <?php echo $link;?> <a><span class="glyphicon glyphicon-copy"></span></a></p>
+            <h3>Your note <?=$title ?> has been saved!</h3>
+            <div class="d-block">
+                <p class="d-inline">Your code is: <span id="code"><?=$voucher;?></span></p>
+                <a class="btn btn-link trigger text-primary" data-trigger="copy" data-clipboard-target="#code">
+                    <i class="far fa-copy"></i>
+                </a>
+            </div>
+            <div class="d-block">
+                <p class="d-inline">Your link is: <span id="link"><?=$link;?></span></p>
+                <a class="btn btn-link trigger text-primary" data-trigger="copy" data-clipboard-target="#link">
+                    <i class="far fa-copy"></i>
+                </a>
+            </div>
             <button class="btn btn-sm box-btn btn-primary" id="btnQr">View QR</button>
         </div>
     </div>

@@ -102,6 +102,10 @@
     background-color: #55ACEE;
 }
 
+.trigger{
+    cursor: pointer;
+}
+
 #btn_compose{
     background-color: #ffffff;
     border: none;
