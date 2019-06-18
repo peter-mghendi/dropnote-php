@@ -22,7 +22,7 @@
                     Okay, I did this as a joke. But hey, here we are, and here it is. Just one rule though: don't make it a point listening 
                     to words on a screen. Honestly, why are you even reading this? </p>
                 <p>Okay don't get me wrong, I did this as seriously as anything else (ummmm...), but it may contain bugs that slipped past
-                    our notice (The ones that aren't intentional). Click <a href="_includes/_known.php"><i class="far fa-hand-point-right mr-2"></i>here<i class="far fa-hand-point-left ml-2"></i></a> to 
+                    our notice (The ones that aren't intentional). Click <a href="https://www.github.com/l3njo/dropnote-web"><i class="far fa-hand-point-right mr-2"></i>here<i class="far fa-hand-point-left ml-2"></i></a> to 
                     view the bugs we've already caught, report the ones we 
                     haven't and/or discuss us putting in new ones for you to "catch". ;) </p>               
             </p>
