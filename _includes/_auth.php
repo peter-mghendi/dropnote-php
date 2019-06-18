@@ -1,15 +1,5 @@
 <?php
     $len = 12;
-    function getToken(int $length) {
-        $token = "";
-        $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        $codeAlphabet .= "abcdefghijklmnopqrstuvwxyx";
-        $codeAlphabet .= "0123456789";
-        for($i=0; $i<$length; $i++){
-            $token .= $codeAlphabet[random_int(0, strlen($codeAlphabet)-1)];
-        }
-        return $token;
-    }
     
     // TODO Validation
     if (isset($_POST['login'])) {

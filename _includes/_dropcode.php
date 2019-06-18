@@ -1,6 +1,5 @@
 <?php
 extract($_REQUEST);
-include '_connect.php';
 $query = "SELECT * FROM notes WHERE voucher = '$voucher'";
 $result = mysqli_query($db,$query) ;
 $row = mysqli_fetch_row($result);

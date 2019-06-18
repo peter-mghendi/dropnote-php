@@ -4,9 +4,21 @@
 
     include('./_includes/phpqrcode/qrlib.php'); 
 
-    include './_includes/_connect.php';
-    include '_includes/_auth.php';
     include '_account/_edit.php';
+    include '_includes/_connect.php';
+    include '_includes/_auth.php';
+    include '_includes/_note.php';
+
+    function getToken(int $length) {
+        $token = "";
+        $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $codeAlphabet .= "abcdefghijklmnopqrstuvwxyx";
+        $codeAlphabet .= "0123456789";
+        for($i=0; $i<$length; $i++){
+            $token .= $codeAlphabet[random_int(0, strlen($codeAlphabet)-1)];
+        }
+        return $token;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
