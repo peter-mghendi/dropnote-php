@@ -5,7 +5,20 @@ $(document).ready( function () {
     $('[data-toggle="tooltip"]').tooltip({
         trigger: 'click',
         placement: 'bottom'
-      });
+    });
+
+    $('#editModal').on('show.bs.modal', function(e) {
+        var trigger = $(e.relatedTarget);
+        var title = trigger.data('title');
+        var content = trigger.data('content');
+        var data_for = trigger.data('for');
+        var id = trigger.data('id');
+        var modal = $(this);
+        modal.find('input').first().val(title);
+        modal.find('textarea').val(content);
+        modal.find('input').eq(1).val(data_for);
+        modal.find('input').eq(3).val(id);
+    });
 
     function flashTooltip(btn, message){
         $(btn).tooltip('hide')
@@ -60,4 +73,4 @@ $(document).ready( function () {
             hiddenCard.style.display = "none";  
         };
     }
-} );
+});

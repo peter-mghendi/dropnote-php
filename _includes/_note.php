@@ -41,6 +41,25 @@
             mysqli_query($db, $sql) or die(mysqli_error($db));
             header("location:$this_page");
             exit();
-
-        // TODO Edit
     } 
+
+    if (isset($_POST['edit_id'])){
+        extract($_POST);
+
+        if (empty ($new_title)) $new_title = '[Untitled]';
+        if (empty ($new_dropped_for)) $new_dropped_for = '[Unspecified]';
+        else {
+            $isql= "SELECT * FROM users WHERE email = '$new_dropped_for'";
+            $ires = mysqli_query($db,$isql);
+            $irow =mysqli_fetch_row($ires);
+            $new_dropped_for = $irow[4];
+        }
+
+        if (isset($new_cbAnonymous)) $new_dropped_by = '[Anonymous]';
+        else $new_dropped_by = $_SESSION['token'];
+
+        $sql="UPDATE notes SET title = '$new_title', content = '$new_content', dropped_by = '$new_dropped_by', dropped_for = '$new_dropped_for' WHERE id = $edit_id";
+        mysqli_query($db, $sql);
+        header("location:$this_page");
+        exit();
+    }

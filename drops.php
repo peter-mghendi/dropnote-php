@@ -20,7 +20,7 @@ $hicount = mysqli_num_rows($hiresult);
             <table class="table table-borderless table-hover datatable" id="example">
                 <caption><?="You have $hicount hidden notes";?></caption>
                 <thead>
-                <tr class="text-center">
+                <tr>
                     <th>TITLE</th>
                     <th>VOUCHER</th>
                     <th>DROPPED ON</th>
@@ -32,7 +32,7 @@ $hicount = mysqli_num_rows($hiresult);
                 <?php 
                     $query = "select * from notes WHERE status = '$vistat' AND dropped_by = '{$_SESSION['token']}'";
                     $resulti = mysqli_query($db,$query);
-                    while($row =mysqli_fetch_row($resulti)){
+                    while($row =mysqli_fetch_row($resulti)):
                         $id = $row[0];
                         if ($row[6] != "[Unspecified]"){
                             $tok = $row[6];
@@ -41,22 +41,29 @@ $hicount = mysqli_num_rows($hiresult);
                             $urow =mysqli_fetch_row($res);
                             $drop_for = $urow[2];
                         } else $drop_for = $row[6];
-                        
-                        // TODO Revoke all
-                        echo "<tr>";
-                        echo "<td><a href = \"drops.php?voucher=$row[3]\">$row[1]</a></td>";
-                        echo "<td>$row[3]</td>";
-                        echo "<td>$row[4]</td>";
-                        echo "<td><a>$drop_for</a></td>";
-                        echo "<td><span>
-                                <a name='edit' title='Edit' href='edit.php?id=$id'><i class='fas fa-edit'></i></a>
-                                <a name='hide' title='Hide' href='$this_page?note=hide&id=$id&status=$vistat'><i class='fas fa-eye-slash'></i></a>
-                                <a name='revoke' title='Revoke' href='$this_page?note=revoke&id=$id'><i class='fas fa-redo-alt'></i></a>
-                                <a name='delete' title='Delete' href='$this_page?note=delete&id=$id&status=$vistat'><i class='fas fa-eraser'></i></a>
-                            </span></td>";
-                        echo "</tr>";
-                    }
-                ?>
+
+                        // HACK For modal
+                        $data = mysqli_fetch_row(mysqli_query($db, "select * from notes WHERE id = '$id'"));
+                        $data_for = $data[6];
+                        if ($data_for != "[Unspecified]") $data_for =  mysqli_fetch_row(mysqli_query($db, "SELECT * FROM users WHERE token = '${row[6]}'"))[2];
+                        ?>
+
+                        <!-- TODO Revoke all -->
+                        <tr>
+                        <td><a href='drops.php?voucher=<?=$row[3];?>'><?=$row[1];?></a></td>
+                        <td><?=$row[3];?></td>
+                        <td><?=$row[4];?></td>
+                        <td><a><?=$drop_for;?></a></td>
+                        <td><span>
+                                <a name='edit' title='Edit' href='#editModal' data-toggle='modal' 
+                                data-title='<?="$data[1]"?>' data-content='<?=$data[2];?>' data-for='<?=$data_for;?>' data-id='<?=$id;?>'>
+                                <i class='fas fa-edit'></i></a>
+                                <a name='hide' title='Hide' href='<?=$this_page;?>?note=hide&id=$id&status=<?=$vistat;?>'><i class='fas fa-eye-slash'></i></a>
+                                <a name='revoke' title='Revoke' href='<?=$this_page;?>?note=revoke&id=<?=$id;?>'><i class='fas fa-redo-alt'></i></a>
+                                <a name='delete' title='Delete' href='<?=$this_page;?>?note=delete&id=$id&status=<?=$vistat;?>'><i class='fas fa-eraser'></i></a>
+                            </span></td>
+                        </tr>
+                <?php endwhile; ?>
                 </tbody>
             </table>
         </div>
@@ -64,13 +71,13 @@ $hicount = mysqli_num_rows($hiresult);
     
     <div id="hiddenNotes" class="card hidden-div notes-margin mb-3">
         <div class="card-body">
-        <a href="javascript:void(0)" id="btnHide" class="btn btn-sm btn-success box-btn"><span class="glyphicon glyphicon-eye-close"></span> HIDE HIDDEN</a>
-        <a href="<?=$this_page;?>?note=hide&status=<?php echo $histat; ?>" class="btn btn-sm btn-warning box-btn"><span class="glyphicon glyphicon-eye-open"></span> UNHIDE ALL</a>
-        <a href="<?=$this_page;?>?note=delete&status=<?php echo $histat; ?>" class="btn btn-sm btn-danger box-btn"><span class="glyphicon glyphicon-trash"></span> DELETE ALL</a>
+        <a href="javascript:void(0)" id="btnHide" class="btn btn-sm btn-success box-btn">HIDE HIDDEN</a>
+        <a href="<?=$this_page;?>?note=hide&status=<?php echo $histat; ?>" class="btn btn-sm btn-warning box-btn">UNHIDE ALL</a>
+        <a href="<?=$this_page;?>?note=delete&status=<?php echo $histat; ?>" class="btn btn-sm btn-danger box-btn">DELETE ALL</a>
         <table class="table table-borderless table-hover datatable" id="example">
                 <caption><?="You have $hicount hidden notes";?></caption>
                 <thead>
-                <tr class="text-center">
+                <tr>
                     <th>TITLE</th>
                     <th>VOUCHER</th>
                     <th>DROPPED ON</th>

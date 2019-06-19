@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="content">Content:</label>
-                    <textarea class="form-control" name="content" id="content" rows="10"  placeholder="Note Content..." maxlength="5000" autocomplete="off" required></textarea>
+                    <textarea class="form-control" name="content" id="content" rows="4"  placeholder="Note Content..." maxlength="5000" autocomplete="off" required></textarea>
                 </div>
                 <fieldset style='display: <?=isset($_SESSION['user'])?'block':'none';?>'>
                     <div class="form-group">
@@ -31,7 +31,7 @@
                         <small>Anonymous notes are not tied to your account in any way. Consequently, no further actions can be performed on them after they are saved.</small>
                     </div>
                 </fieldset>
-                <button type="submit" class="btn btn-other btn-block" name="submit" id="btnDropNote"><span class="glyphicon glyphicon-hand-down"></span> Drop</button>
+                <button type="submit" class="btn btn-other btn-block" name="submit" id="btnDropNote">Drop</button>
             </form>
         </div>
     </div>

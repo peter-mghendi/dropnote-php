@@ -46,7 +46,7 @@ if(isset($_GET['voucher'])){
         <div class="card-header">
             <h4 class="card-title">RE: <?php echo $title ?></h3>
             <h4 class="card-subtitle text-muted">Dropped on <?php echo $dropped_on;?></h4>
-            <h5 class="card-subtitle text-muted">Voucher: <?php echo $voucher;?> <a><span class="glyphicon glyphicon-copy"></span></a></h5>
+            <h5 class="card-subtitle text-muted">Voucher: <?php echo $voucher;?> <a></a></h5>
         </div>
         <div class="card-body"><p><?php echo $content?></p></div>
     </div>

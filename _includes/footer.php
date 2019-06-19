@@ -6,7 +6,7 @@
 <script src="_assets/vendor/fontawesome-free-5.9.0-web/js/all.min.js"></script>
 <script src="_assets/vendor/datatables/datatables.min.js"></script>
 <script src="_assets/vendor/clipboardjs/clipboard.min.js"></script>
-<script src="_assets/js/main.js"></script>
+<script src="_assets/js/main.js?<?=time();?>"></script>
 </body>
 </html>
 
