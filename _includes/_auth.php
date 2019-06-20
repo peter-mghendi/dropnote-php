@@ -1,20 +1,21 @@
 <?php
     $len = 12;
     
-    // TODO Validation
     if (isset($_POST['login'])) {
+        $notify;
         extract($_POST);
         $password = md5($password);
         $sql = "select * from users where email='$login' and password='$password'";
         $res = mysqli_query($db, $sql) or die( mysqli_error($db) );
-
         if (mysqli_num_rows($res)===1){
             $row=mysqli_fetch_row ($res);
             $_SESSION['user'] = $row[1];
             $_SESSION['token'] = $row[4];
-            header("location:$this_page");
-            exit();
-        } else echo "Wrong Username/Password";
+            $notify = new Notification(true, 'You are logged in');
+        } else $notify = new Notification(false, 'Wrong email/password');
+        array_push($_SESSION['notify'], serialize($notify));
+        header("location:$this_page");
+        exit();
     }
 
     // TODO Validation

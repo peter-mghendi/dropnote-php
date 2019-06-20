@@ -124,7 +124,7 @@ $hicount = mysqli_num_rows($hiresult);
             <h4 class="card-title"><b>RE: <?=$title ?></b></h4>
             <h5 class="card-subtitle text-muted"><b>Dropped on <?=$dropped_on;?></b></h5>
             <div class="d-block">
-                <h5 class="card-subtitle text-muted d-inline">Voucher: <span id="code"><?=$voucher;?></span></h5>
+                <h5 class="card-subtitle text-muted d-inline">Voucher: <span id="voucher"><?=$voucher;?></span></h5>
                 <a class="btn btn-link trigger text-primary" data-trigger="copy" data-clipboard-target="#voucher">
                     <i class="far fa-copy"></i>
                 </a>
