@@ -9,6 +9,8 @@
     include '_includes/_auth.php';
     include '_includes/_note.php';
 
+    $_SESSION['notify'] = array();
+
     function getToken(int $length) {
         $token = "";
         $codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -31,4 +33,7 @@
     <link rel="stylesheet" href="_assets/css/style.css?<?=time();?>">
 </head>
 <body>
-<?php include '_includes/navbar.php'; ?>
+<?php 
+    include '_includes/navbar.php';
+    include '_includes/_notify.php';
+?>
