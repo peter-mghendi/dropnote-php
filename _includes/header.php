@@ -1,15 +1,18 @@
 <?php 
     if (session_status() === PHP_SESSION_NONE) session_start(); 
+    if (!isset($_SESSION['notify'])) $_SESSION['notify'] = array();
     $this_page = basename($_SERVER["PHP_SELF"]);
 
     include('./_includes/phpqrcode/qrlib.php'); 
+    spl_autoload_register(function ($class_name) {
+        include '_includes/lib/' . $class_name . '.php';
+    });
+
+    include '_includes/_connect.php';
 
     include '_account/_edit.php';
-    include '_includes/_connect.php';
     include '_includes/_auth.php';
     include '_includes/_note.php';
-
-    $_SESSION['notify'] = array();
 
     function getToken(int $length) {
         $token = "";

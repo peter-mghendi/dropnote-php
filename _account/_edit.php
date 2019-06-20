@@ -1,5 +1,5 @@
 <?php
-    // TODO Data authentication
+    // TODO Data authentication 
     if(isset($_POST["new_username"])) {
         extract($_POST);
         $token = $_SESSION['token'];
@@ -15,13 +15,30 @@
         exit();
     }
 
-    // TODO Data authentication
     if(isset($_POST["old_password"])) {
         extract($_POST);
-        $token = $_SESSION['token'];
-        $new_password = md5($new_password);
-        $sql="UPDATE users SET password = '$new_password' WHERE token = '$token'";
-        mysqli_query($db, $sql) or die(mysqli_error($db));
+        $notify;
+        if ($new_password !== $con_password) 
+            $notify = new Notification(false, "The passwords do not match.", "danger");
+        else {
+            $token = $_SESSION['token'];
+            $old_password = md5($old_password);
+            $new_password = md5($new_password);
+            $sql = "SELECT password FROM users WHERE token = '$token'";
+            $res = mysqli_query($db, $sql);
+            $password = mysqli_fetch_row($res)[0];
+            if ($old_password !== $password)
+                $notify = new Notification(false, "Incorrect current password.", "danger");
+            elseif ($new_password === $password)
+                $notify = new Notification(false, "Please use a different new password.", "danger");
+            else {
+                $sql="UPDATE users SET password = '$new_password' WHERE token ='$token'";
+                mysqli_query($db, $sql) or die(mysqli_error($db));
+                $notify = new Notification(true, "Password changed.", "success");
+            }
+        }
+        
+        array_push($_SESSION['notify'], serialize($notify));
         header("location:$this_page");
         exit();
     }
