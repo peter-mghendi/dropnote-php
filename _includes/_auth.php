@@ -21,28 +21,33 @@
     // TODO Validation
     if (isset($_POST['username'])) {
         extract($_POST);
-        do{
-            $token = getToken($len);
-            $tkn_query = "SELECT * FROM users WHERE token = '$token'";
-            $tkn_res = mysqli_query($db, $tkn_query);
-            $tkn_count = mysqli_num_rows($tkn_res);    
-        } while ($tkn_count>0);
-        
-        $sql = "select * from users where email='$email'";
-        $res = mysqli_query($db, $sql);
-        if(mysqli_num_rows($res) === 0){  
-            $password = md5($password);
-            $sql3="INSERT INTO users VALUES (null,'$username','$email','$password', '$token')";
-            mysqli_query($db, $sql3);
-            $_SESSION['user'] = $username;
-            $_SESSION['token'] = $token;
-            header("location:$this_page");
-            exit();
-        } else echo "ERROR: The email address $email already has an account linked to it.";
+        if ($password === $confirm){
+            do{
+                $token = getToken($len);
+                $sql = "SELECT * FROM users WHERE token = '$token'";
+                $res = mysqli_query($db, $sql);
+            } while (mysqli_num_rows($res) > 0);
+            
+            $sql = "SELECT * FROM users WHERE email = '$email'";
+            $res = mysqli_query($db, $sql);
+            if(mysqli_num_rows($res) === 0){  
+                $password = md5($password);
+                $sql = "INSERT INTO users VALUES (null,'$username','$email','$password', '$token')";
+                mysqli_query($db, $sql);
+                $_SESSION['user'] = $username;
+                $_SESSION['token'] = $token;
+                $notify = new Notification(true, 'You have signed up and logged in');
+            } else $notify = new Notification(false, 'That email address is already in use');
+        } else $notify = new Notification(false, 'The passwords do not match');
+        array_push($_SESSION['notify'], serialize($notify));
+        header("location:$this_page");
+        exit();
     }
 
     if(isset($_GET["logout"])){
         session_destroy();
+        $notify = new Notification(true, 'Logged out');
+        array_push($_SESSION['notify'], serialize($notify));
         header("location:$this_page");
         exit();
     }
