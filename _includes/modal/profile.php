@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-body">
         <div class="tab-content">
-            <div class="tab-pane active" id="view" role="tabpanel" aria-labelledby="view-tab">
+            <div class="tab-pane active table-responsive" id="view" role="tabpanel" aria-labelledby="view-tab">
                 <table class="table table-borderless" id="table">
                     <caption>User ID: <?=$_SESSION['token'];?></caption>
                     <thead>
@@ -57,15 +57,15 @@
             <form class="form" role="form" method="post">
                     <div class="form-group">
                         <label for="old_password">Current Password:</label>
-                        <input type="text" class="form-control" name="old_password" id="old_password" placeholder="Current Password" autocomplete="off" required>
+                        <input type="password" class="form-control" name="old_password" id="old_password" placeholder="Current Password" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="new_password">New Password:</label>
-                        <input type="text" class="form-control" name="new_password" id="new_password" placeholder="New Password" autocomplete="off" required>
+                        <input type="password" class="form-control" name="new_password" id="new_password" placeholder="New Password" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="con_password">Confirm Password:</label>
-                        <input type="text" class="form-control" name="con_password" id="con_password" placeholder="Confirm Password" autocomplete="off" required>
+                        <input type="password" class="form-control" name="con_password" id="con_password" placeholder="Confirm Password" autocomplete="off" required>
                     </div>
                     <button type="submit" class="btn btn-other" name="submit">Save</button>
                 </form>
