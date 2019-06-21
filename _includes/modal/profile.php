@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-body">
         <div class="tab-content">
-            <div class="tab-pane active" id="view" role="tabpanel" aria-labelledby="view-tab">
+            <div class="tab-pane active table-responsive" id="view" role="tabpanel" aria-labelledby="view-tab">
                 <table class="table table-borderless" id="table">
                     <caption>User ID: <?=$_SESSION['token'];?></caption>
                     <thead>

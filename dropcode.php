@@ -1,13 +1,12 @@
 <?php
   $isNote = false;
-  // TODO Validate data, minify 
   if (isset($_REQUEST['voucher'])) {
       include '_includes/_dropcode.php'; 
       if (count(row) > 0) $isNote = false;
     }
 ?>
 <?php include '_includes/header.php'; ?>
-<div class='container page-content' >
+<div class='container my-4'>
     <div class='card mb-3'>
         <div class='card-body'>
             <form class='form' role='form' method='post'>
@@ -19,7 +18,7 @@
             </form>
         </div>
     </div>
-    <?php if(isNote): ?>
+    <?php if($isNote): ?>
         <div class='card mb-3'>
             <div class='card-header'>
                 <h4 class='card-title'><b>RE: <?=$title;?></b></h4>

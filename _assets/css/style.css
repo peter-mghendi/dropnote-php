@@ -46,7 +46,7 @@
     background-color: rgba(0,0,16,0.7) ;
     opacity: .73;
     color: #fefefe;
-    margin-top: 10px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -70,7 +70,6 @@
 }
 
 .social-item:hover {
-    /* opacity: 0.8; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -122,10 +121,6 @@
 
 #myToggle{
     cursor: pointer;
-}
-
-#welcomeCard{
-    margin-top:70px;
 }
 
 #qrcode{
